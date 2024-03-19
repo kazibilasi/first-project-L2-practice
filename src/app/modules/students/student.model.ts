@@ -4,6 +4,7 @@ import {
 	UserName,
 	guardian,
 	student,
+	
 } from './student.interface';
 
 const userNameSchema = new Schema<UserName>({
@@ -76,3 +77,5 @@ const studentSchema = new Schema<student>({
 	},
 	isActive: ['active', 'blocked'],
 });
+
+export const StudentModel = model<student>('Student', studentSchema)
